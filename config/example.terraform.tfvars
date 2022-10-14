@@ -141,17 +141,17 @@ route_table_association_config = {
     }
 
     route-table-association-two = {
-        subnet_name      = "public-us-east-1a"
+        subnet_name      = "public-us-east-1b"
         route_table_name = "public-table-one"
     }
 
     route-table-association-three = {
-        subnet_name      = "public-us-east-1a"
+        subnet_name      = "private-us-east-1a"
         route_table_name = "private-table-one"
     }
 
     route-table-association-four = {
-        subnet_name      = "public-us-east-1a"
+        subnet_name      = "private-us-east-1a"
         route_table_name = "private-table-two"
     }
 
