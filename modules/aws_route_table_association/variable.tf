@@ -1,7 +1,7 @@
-variabel subnet_id {
+variable subnet_id {
 
 }
 
-variabel route_table_id {
+variable route_table_id {
 
 }
