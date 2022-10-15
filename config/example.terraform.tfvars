@@ -156,3 +156,32 @@ route_table_association_config = {
     }
 
 }
+
+eks_config = {
+
+    "01" = {        
+        subnet1 = "public-us-east-1a"
+        subnet2 = "public-us-east-1b"
+        subnet3 = "private-us-east-1a"
+        subnet4 = "private-us-east-1b"
+        tags = {
+            "Name" =  "demo-cluster"
+        }  
+    }
+}
+
+eks_nodeGroup_config = {
+
+    "node2" = {
+        eks_cluster     = "01"
+        node_group_name = "node2"
+        nodes_iam_role  = "eks-node-group-general2"
+
+        private_subnet1 = "private-us-east-1a"
+        private_subnet2 = "private-us-east-1b"
+
+        tags = {
+            "Name" =  "node2"
+        } 
+    }
+}
