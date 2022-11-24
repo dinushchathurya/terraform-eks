@@ -23,6 +23,8 @@ subnet_config = {
         availability_zone = "us-east-1a"
         tags = {
             Name = "public-us-east-1a"
+            "kubernetes.io/cluster/eks" = "shared"
+            "kubernetes.io/role/elb"    = 1
         }
     }
 
@@ -32,6 +34,8 @@ subnet_config = {
         availability_zone = "us-east-1b"
         tags = {
             Name = "public-us-east-1b"
+            "kubernetes.io/cluster/eks" = "shared"
+            "kubernetes.io/role/elb"    = 1
         }
     }
 
@@ -41,6 +45,8 @@ subnet_config = {
         availability_zone = "us-east-1a"
         tags = {
             Name = "private-us-east-1a"
+            "kubernetes.io/cluster/eks" = "shared"
+            "kubernetes.io/role/elb"    = 1
         }
     }
 
@@ -50,6 +56,8 @@ subnet_config = {
         availability_zone = "us-east-1b"
         tags = {
             Name = "private-us-east-1b"
+            "kubernetes.io/cluster/eks" = "shared"
+            "kubernetes.io/role/elb"    = 1
         }
     }
 
@@ -181,7 +189,8 @@ eks_nodeGroup_config = {
         private_subnet2 = "private-us-east-1b"
 
         tags = {
-            "Name" =  "node2"
+            Name =  "node2"
+            "kubernetes.io/cluster/eks" = "owned"
         } 
     }
 }
